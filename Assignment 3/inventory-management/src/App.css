@@ -1,0 +1,104 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.forms-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  width: 45%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.inventory-list-container {
+  margin-top: 30px;
+}
+
+.inventory-list {
+  list-style: none;
+  padding: 0;
+}
+
+.inventory-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.item-actions button {
+  margin-left: 10px;
+}
+
+/* You can add more specific styling if needed */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Button styles */
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Red button */
+.button.red {
+  background-color: #f44336; /* Red */
+}
+
+/* Blue button */
+.button.blue {
+  background-color: #008CBA; /* Blue */
+}
+
+/* Yellow button */
+.button.yellow {
+  background-color: #f4d142; /* Yellow */
+}

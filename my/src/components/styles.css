@@ -1,0 +1,107 @@
+/* styles.css */
+
+body {
+  background-color: #99e7d1;
+}
+.container {
+  display: flex;
+  flex-direction: column; /* Display children in a column */
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+}
+
+.form-container {
+  width: 330px;
+  padding: 10px 40px 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add margin to separate from the paragraph */
+  display: flex; /* Added */
+  flex-direction: column; /* Added */
+  align-items: center; /* Added */
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn {
+  display: inline-block;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Position the paragraph below the container */
+.container p {
+  margin-top: 20px; /* Add margin to separate from the form container */
+}
+
+
+.w-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.box {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+
+.welcome-message {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+  

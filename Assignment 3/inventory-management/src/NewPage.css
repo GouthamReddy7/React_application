@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .api-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .api-table th, .api-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .api-table th {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
+    working_dir: /app/Assignment 3/backend
+    command: node server.js
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+
+  inventory-management:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
+    working_dir: /app
+    command: npm start --prefix Assignment\ 3/inventory-management
+    ports:
+      - "3006:3006"
+    volumes:
+      - .:/app
+
+  my:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
+    working_dir: /app
+    command: npm start --prefix my
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+
+  my-components:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
+    working_dir: /app
+    command: node my/src/components/Server.js
+    ports:
+      - "5001:5001"
+    volumes:
+      - .:/app
+
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"

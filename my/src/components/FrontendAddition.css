@@ -1,0 +1,44 @@
+.frontend-addition-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 50%; /* Set the width of the container to 50% of the viewport */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px; /* Adjust the gap between input fields */
+  }
+  
+  .input-container label {
+    flex: 1; /* Ensure the label takes up the left side */
+  }
+  
+  .input-container input {
+    flex: 2; /* Ensure the input field takes up the right side */
+    margin-left: 10px; /* Add some space between the label and input field */
+  }
+  
+  .submit-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Adjust the gap between the button and the input fields */
+  }
+  
+  .result-container {
+    margin-top: 20px;
+  }
+  
+  .result-text {
+    font-weight: bold;
+  }
+  
