@@ -6,7 +6,7 @@ const NavigationBar = () => {
 
 
   const handleLogout = () => {
-    window.location.href = 'http://192.168.1.36:3006';
+    window.location.href = 'http://52.91.136.13/:3006';
   };
 
   const navbarStyle = {
@@ -53,10 +53,10 @@ const NavigationBar = () => {
       </Navbar.Brand>
       <Nav className="ml-auto">
         {/* Button for Inventory Management */}
-        <Nav.Link href="http://192.168.1.36:3000" target="_blank" style={{ ...buttonStyle, backgroundColor: 'blue', color: 'white' }}>Inventory Management</Nav.Link>
+        <Nav.Link href="http://52.91.136.13:3000" target="_blank" style={{ ...buttonStyle, backgroundColor: 'blue', color: 'white' }}>Inventory Management</Nav.Link>
         {/* Button for Third-party API */}
        
-      </Nav> <Nav.Link href="http://192.168.1.36:3000/new-page" target="_blank" style={{ ...buttonStyle2, backgroundColor: 'green', color: 'white' }}>3rd party API</Nav.Link>
+      </Nav> <Nav.Link href="http://52.91.136.13:3000/new-page" target="_blank" style={{ ...buttonStyle2, backgroundColor: 'green', color: 'white' }}>3rd party API</Nav.Link>
 
       <Nav.Link onClick={handleLogout} style={{ ...buttonStyle3, backgroundColor: 'red', color: 'white' }}>Logout</Nav.Link>
     </Navbar>
