@@ -7,7 +7,7 @@ function Login( { onLogin }) {
   const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
-    onLogin();
+    
 
     if (!username || !password) {
       alert('Please fill in both username and password fields.');
@@ -19,6 +19,7 @@ function Login( { onLogin }) {
       alert('Login successful!');
       console.log(username)
       localStorage.setItem('username', username);
+      onLogin();
       //window.location.href = 'http://192.168.56.1:3006/home';
     } catch (error) {
       console.error(error);
