@@ -28,7 +28,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3006/inventory');
+        const response = await axios.get('http://52.91.136.13:3006/inventory');
         console.log(response);
       } catch (error) {
         console.error('Error fetching inventory items:', error);

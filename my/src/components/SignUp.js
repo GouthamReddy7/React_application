@@ -28,7 +28,7 @@ function SignUp() {
     }
 
     try {
-      await axios.post('http://localhost:5001/signup', { username, password });
+      await axios.post('http://52.91.136.13:5001/signup', { username, password });
       alert('Sign up successful!');
       navigate(`/`)
     } catch (error) {

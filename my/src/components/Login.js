@@ -15,7 +15,7 @@ function Login( { onLogin }) {
     }
   
     try {
-      await axios.post('http://localhost:5001/login', { username, password });
+      await axios.post('http://52.91.136.13:5001/login', { username, password });
       alert('Login successful!');
       console.log(username)
       localStorage.setItem('username', username);

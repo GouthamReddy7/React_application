@@ -21,7 +21,7 @@ const InventoryForm = ({ onAddItem }) => {
       formData.append('quantity', quantity);
       formData.append('image', image);
 
-      const response = await axios.post('http://localhost:5000/inventory', formData, {
+      const response = await axios.post('http://52.91.136.13:5000/inventory', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

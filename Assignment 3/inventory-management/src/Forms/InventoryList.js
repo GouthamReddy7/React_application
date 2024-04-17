@@ -12,7 +12,7 @@ const InventoryList = () => {
 
   const fetchInventoryItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/inventory');
+      const response = await axios.get('http://52.91.136.13:5000/inventory');
       setInventoryItems(response.data);
       if (response.data.length === 0) {
         alert('Inventory is empty!');
@@ -24,7 +24,7 @@ const InventoryList = () => {
 
   const handleDeleteItem = async (itemId) => {
     try {
-      await axios.delete(`http://localhost:5000/inventory/${itemId}`);
+      await axios.delete(`http://52.91.136.13:5000/inventory/${itemId}`);
       setInventoryItems(prevItems => prevItems.filter(item => item._id !== itemId));
     } catch (error) {
       console.error('Error deleting inventory item:', error);
@@ -33,7 +33,7 @@ const InventoryList = () => {
 
   const handleUpdateItem = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/inventory');
+      const response = await axios.get('http://52.91.136.13:5000/inventory');
       if (response.data.length === 0) {
         alert('Inventory is empty!');
       }

@@ -14,7 +14,7 @@ const InventoryUpdateForm = ({ item, onClose }) => {
     }
 
     try {
-      const response = await axios.put(`http://localhost:5000/inventory/${item._id}`, {
+      const response = await axios.put(`http://52.91.136.13:5000/inventory/${item._id}`, {
         name,
         quantity: parseInt(quantity),
       });

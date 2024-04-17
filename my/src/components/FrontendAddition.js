@@ -24,7 +24,7 @@ const FrontendAddition = () => {
 
     //backend addition code - api call
     try {
-      const response = await axios.post('http://localhost:5001/api/add', { num1, num2 });
+      const response = await axios.post('http://52.91.136.13:5001/api/add', { num1, num2 });
       setBackendResult(response.data.result);
     } catch (error) {
       console.error('Error performing addition:', error);

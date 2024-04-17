@@ -30,7 +30,7 @@ const App = () => {
     // Fetch inventory data after each successful addition
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/inventory');
+        const response = await axios.get('http://52.91.136.13:5000/inventory');
         console.log(response)
       } catch (error) {
         console.error('Error fetching inventory items:', error);

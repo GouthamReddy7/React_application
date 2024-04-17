@@ -8,7 +8,7 @@ const InventoryItem = ({ item, onDelete, onUpdate }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/inventory/${item._id}`);
+      await axios.delete(`http://52.91.136.13:5000/inventory/${item._id}`);
       onDelete(item._id);
       alert('Item successfully deleted');
       onUpdate();
