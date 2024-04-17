@@ -6,7 +6,7 @@ const NavigationBar = () => {
 
 
   const handleLogout = () => {
-    window.location.href = 'http://52.91.136.13/:3000';
+    window.location.href = 'http://52.91.136.13:3000';
   };
 
   const navbarStyle = {
