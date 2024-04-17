@@ -1,59 +1,58 @@
 version: '3.8'
 
 services:
-  backend:
-    build:
+  backend-server:
+    build: 
       context: .
       dockerfile: Dockerfile
-      args:
-        - NODE_ENV=production
-    working_dir: /app/Assignment 3/backend
-    command: node server.js
+    container_name: backend-server
+    command: sh -c "node Assignment\\ 3/backend/server.js"
     ports:
       - "5000:5000"
-    volumes:
-      - .:/app
-
-  inventory-management:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        - NODE_ENV=production
     working_dir: /app
-    command: npm start --prefix Assignment\ 3/inventory-management
-    ports:
-      - "3006:3006"
-    volumes:
-      - .:/app
 
   my:
-    build:
+    build: 
       context: .
       dockerfile: Dockerfile
-      args:
-        - NODE_ENV=production
-    working_dir: /app
-    command: npm start --prefix my
+    container_name: my
+    command: sh -c "npm start --prefix my"
     ports:
       - "3000:3000"
-    volumes:
-      - .:/app
+    working_dir: /app
 
-  my-components:
-    build:
+  my-server:
+    build: 
       context: .
       dockerfile: Dockerfile
-      args:
-        - NODE_ENV=production
-    working_dir: /app
-    command: node my/src/components/Server.js
+    container_name: my-server
+    command: sh -c "node my/src/components/Server.js"
     ports:
       - "5001:5001"
-    volumes:
-      - .:/app
+    working_dir: /app
 
-  db:
-    image: mongo:latest
+  backend-db:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend-db
+    command: sh -c "node Assignment\\ 3/backend/db.js"
+    working_dir: /app
+
+  inventory-management:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: inventory-management
+    command: sh -c "npm start --prefix Assignment\\ 3/inventory-management"
     ports:
-      - "27017:27017"
+      - "3006:3006"
+    working_dir: /app
+
+  proxy:
+    image: caddy:2.3.0-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+
